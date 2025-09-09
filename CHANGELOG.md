@@ -1,3 +1,14 @@
+## [2.1.1] - 2025-09-09
+
+### Release Summary
+Bug Fix Release
+
+### Bugfixes
+- TC-2733 Components missing from analysis/latest/component
+- TC-2758 Listing latest components by CPE doesn't show all descendants defined in SBOMs
+- TC-2701 Stage Atlas timeout for CPE cpe:/a:redhat:openstack:13::el7 with params descendants=10&limit=20&offset=0
+- TC-2717 500 error when searching for purl using /analysis/latest/component/<value> endpoint
+
 ## [2.1.0] - 2025-07-28
 
 ### Release Summary
