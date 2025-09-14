@@ -1,4 +1,4 @@
-## [2.1.1] - 2025-09-xx
+## [2.1.1] - 2025-09-15
 
 ### Release Summary
 Bug Fix Release
