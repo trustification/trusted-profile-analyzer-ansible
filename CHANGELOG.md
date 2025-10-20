@@ -1,9 +1,18 @@
-## [2.2.0] - 2025-10-xx
+## [2.2.0] - 2025-11-xx
 
 ### Release Summary
+Bug fix and enhance release
 
 ### Bugfixes
+- TC-2414 Version 2 - License Export SPDX package CPE mismatches to SBOM
+- TC-2675 No error is reported in the UI when pointing the Quay importer to a non-existent source
+- TC-2980 Scan SBOM - Report generated only with Affected vulnerabilities - Remove Status filter
 
+### Minor Changes
+- TC-2824 AIBOM/CBOM Ingestion and retrieval Task
+- TC-2828 Create an ADR for extracting recommendations information from OSV and CSAF
+- TC-2948 Implementation of the recommendation API endpoint
+- TC-2981 License filtering: consistently update current SBOM packages license filter
 
 ## [2.1.1] - 2025-09-15
 
