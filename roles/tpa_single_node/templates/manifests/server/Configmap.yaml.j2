@@ -69,6 +69,7 @@ data:
                 - "read.metadata"
                 - "update.metadata"
                 - "delete.metadata"
+                - "read.systemInformation"
               "trustify/sbom":
                 - "create.sbom"
                 - "read.sbom"
@@ -86,7 +87,7 @@ data:
             issuerUrl: {{ tpa_single_node_oidc_issuer_url }}
             scopeMappings: &keycloakScopeMappings
               "create:document": [ "create.advisory", "create.importer", "create.metadata", "create.sbom", "create.weakness", "upload.dataset" ]
-              "read:document": [ "ai", "read.advisory", "read.importer", "read.metadata", "read.sbom", "read.weakness" ]
+              "read:document": [ "ai", "read.advisory", "read.importer", "read.metadata", "read.sbom", "read.weakness", "read.systemInformation" ]
               "update:document": [ "update.advisory", "update.importer", "update.metadata", "update.sbom", "update.weakness" ]
               "delete:document": [ "delete.advisory", "delete.importer", "delete.metadata", "delete.sbom", "delete.vulnerability", "delete.weakness" ]
             tlsCaCertificates:
