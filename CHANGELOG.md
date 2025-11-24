@@ -5,10 +5,19 @@ Bug fix and enhance release
 
 ### Bugfixes
 - TC-2414 Version 2 - License Export SPDX package CPE mismatches to SBOM
+- TC-2598 Vulnerabilities table - Inconsistent CVSS column sorting
+- TC-2615 Performance issues with DELETE /api/v2/sbom/{id} endpoint
 - TC-2675 No error is reported in the UI when pointing the Quay importer to a non-existent source
+- TC-2685 When disabling a running Quay importer, the message diplayed in the UI is wrong
+- TC-2686 When an image tag expires in the repository before the importer digests it, there is a nasty error message in the UI under the importer
+- TC-2805 SBOM with vulnerable packages shows 0 vulnerabilities
 - TC-2980 Scan SBOM - Report generated only with Affected vulnerabilities - Remove Status filter
+- TC-2983 OSV Vulnerability not reported on TPA
+- TC-3003 Remove PURL GC endpoint
+- TC-3007 Scan SBOM - Static Spinner while uploading sbom and Generating reports
+- TC-3152 Concurrent upload: duplicate key value violates unique constraint error
 - TC-3176 SBOM and Vulnerability deadlocks fix
-- TC-3191 SBOM details filters out the deprecated advisories
+- TC-3177 zstd encoding is broken
 
 ### Minor Changes
 - TC-2824 AIBOM/CBOM Ingestion and retrieval Task
