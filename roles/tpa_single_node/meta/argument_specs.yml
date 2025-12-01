@@ -16,10 +16,6 @@ argument_specs:
         type: "str"
         version_added: "2.0.0"
         default: "trustification"
-      tpa_single_node_rhel_host:
-        description: "Ip of the instance."
-        type: "str"
-        version_added: "2.0.0"
       tpa_single_node_certificates_dir:
         description: "Folder where to place the certificates to deploy on the instance."
         type: "str"

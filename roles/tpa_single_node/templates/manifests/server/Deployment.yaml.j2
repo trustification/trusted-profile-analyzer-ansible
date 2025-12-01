@@ -173,7 +173,6 @@ spec:
             - containerPort: 8080
               name: endpoint
               protocol: TCP
-              hostIP: {{ tpa_single_node_rhel_host }}
 {% if tpa_single_node_ui_tls == 'true' %}
               hostPort: 443
 {% else %}
