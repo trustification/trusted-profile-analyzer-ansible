@@ -1,3 +1,12 @@
+## [2.2.1] - 2025-12-25
+
+### Release Summary
+Bug fix and enhance release
+
+### Bugfixes
+
+### Minor Changes
+
 ## [2.2.0] - 2025-11-25
 
 ### Release Summary
