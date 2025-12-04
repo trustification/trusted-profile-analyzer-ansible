@@ -1,11 +1,13 @@
-## [2.2.1] - 2025-12-25
+## [2.2.1] - 2025-12-16
 
 ### Release Summary
-Bug fix and enhance release
+Bug fix Release
 
 ### Bugfixes
-
-### Minor Changes
+- TC-2717 500 error when searching for purl using /analysis/latest/component/<value> endpoint
+- TC-3201 Github CVE Importer error - data did not match any variant of untagged enum
+- TC-3214 Improve source_document deletes
+- TC-3234 Concurrent upload: refactoring
 
 ## [2.2.0] - 2025-11-25
 
