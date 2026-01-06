@@ -8,8 +8,7 @@
     rhel: true
   when:
     - ansible_facts['distribution'] == 'RedHat'
-    - ansible_facts['distribution_major_version'] == '9'
-    - (ansible_facts['distribution_version'] | split('.'))[1] | int >= 3
+    - ansible_facts['distribution_version'] is version('9.3', '>=')
 
 - name: Install Operating System Components
   ansible.builtin.include_tasks: os.yml

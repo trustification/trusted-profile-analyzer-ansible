@@ -87,5 +87,4 @@ tpa_single_node_otel_tracing_enabled: "{{ lookup('env', 'TPA_OTEL_TRACING_ENABLE
 # defaults file for tpa_single_node
 tpa_single_node_system_packages:
   - podman
-  - podman-plugins
-  - postgresql
+  - postgresql17-server
