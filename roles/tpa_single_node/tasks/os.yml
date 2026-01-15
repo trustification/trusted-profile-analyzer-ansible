@@ -1,14 +1,4 @@
 ---
-- name: Install repository key
-  ansible.builtin.rpm_key:
-    key: https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-RHEL
-    state: present
-
-- name: Install pgdg repository package
-  ansible.builtin.dnf:
-    name: https://download.postgresql.org/pub/repos/yum/reporpms/EL-9-x86_64/pgdg-redhat-repo-latest.noarch.rpm
-    state: present
-
 - name: Install podman-plugins package
   ansible.builtin.package:
     name: podman-plugins

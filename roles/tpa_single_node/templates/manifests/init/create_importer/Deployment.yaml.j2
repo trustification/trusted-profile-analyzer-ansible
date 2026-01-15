@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: create-importers
+  namespace: "{{ tpa_single_node_namespace }}"
+  labels:
+    app: create-importers
+    app.kubernetes.io/version: 2.2.1
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: create-importers
+  template:
+    metadata:
+      labels:
+        app: create-importers
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: run
+          image: "{{ tpa_single_node_trustification_image }}"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: PGHOST
+              value: "{{ tpa_single_node_pg_host }}"
+            - name: PGPORT
+              value: "{{ tpa_single_node_pg_port }}"
+            - name: PGDATABASE
+              value: "{{ tpa_single_node_pg_admin_db }}"
+            - name: PGUSER
+              value: "{{ tpa_single_node_pg_admin }}"
+            - name: PGPASSWORD
+              value: "{{  tpa_single_node_pg_admin_passwd }}"
+            - name: PGSSLMODE
+              value: {{ tpa_single_node_pg_ssl_mode }}
+            - name: DB_NAME
+              value: "{{ tpa_single_node_pg_db }}"
+            - name: DB_USERNAME
+              value: "{{ tpa_single_node_pg_user }}"
+            - name: DB_PASSWORD
+              value: "{{ tpa_single_node_pg_user_passwd }}"
+          command:
+            - psql
+            - --echo-all
+            - -v
+            - ON_ERROR_STOP=1
+            - -v
+            - db_name=$(DB_NAME)
+            - -v
+            - db_user=$(DB_USERNAME)
+            - -v
+            - db_password=$(DB_PASSWORD)
+            - -f
+            - /etc/importers/importers.sql
+          volumeMounts:
+            - mountPath: /etc/importers
+              name: create-importers
+      volumes:
+        - name: create-importers
+          configMap:
+            name: create-importers
+

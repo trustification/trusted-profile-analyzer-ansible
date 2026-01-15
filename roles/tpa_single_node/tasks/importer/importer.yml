@@ -1,22 +1,29 @@
 ---
-- name: Copy create-importers.sql to Server
-  ansible.builtin.copy:
-    content: "{{ lookup('ansible.builtin.template', 'configs/create-importers.sql') }}"
-    dest: "{{ tpa_single_node_config_dir }}/create-importers.sql"
-    remote_src: true
+- name: Create configmap to create importers
+  ansible.builtin.template:
+    src: "{{ role_path }}/templates/manifests/init/create_importer/Configmap.yaml.j2"
+    dest: "{{ tpa_single_node_kube_manifest_dir }}/ConfigMaps/create_importers.yaml"
     mode: "0600"
+  register: configmap_create_importers
 
-- name: Run create-importers.sql
-  ansible.builtin.command: "psql postgresql://{{ tpa_single_node_pg_user }}:{{ tpa_single_node_pg_user_passwd }}@\
-      {{ tpa_single_node_pg_host }}:{{ tpa_single_node_pg_port }}/{{ tpa_single_node_pg_db }}?sslmode={{ tpa_single_node_pg_ssl_mode }} \
-      -v ON_ERROR_STOP=1 \
-      -f {{ tpa_single_node_config_dir }}/create-importers.sql"
-  changed_when: false
-  no_log: true
-  register: result
-  retries: 2
-  delay: 5
-  until: result.rc == 0
+- name: Set configmaps to create importers
+  ansible.builtin.set_fact:
+    create_importers_configmaps: >-
+      {{
+        [
+          tpa_single_node_kube_manifest_dir + '/ConfigMaps/create_importers.yaml'
+        ]
+      }}
+
+- name: Create importers
+  ansible.builtin.include_tasks: install_manifest.yml
+  vars:
+    podman_spec:
+      state: started
+      systemd_file: create-importers
+      network: "{{ tpa_single_node_podman_network }}"
+      kube_file_content: "{{ lookup('ansible.builtin.template', 'manifests/init/create_importer/Deployment.yaml.j2') | from_yaml }}"
+      configmaps: "{{ create_importers_configmaps }}"
 
 - name: Set configmaps for importer
   ansible.builtin.set_fact:
