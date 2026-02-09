@@ -26,19 +26,13 @@ spec:
             - name: PGPORT
               value: "{{ tpa_single_node_pg_port }}"
             - name: PGDATABASE
-              value: "{{ tpa_single_node_pg_admin_db }}"
+              value: "{{ tpa_single_node_pg_db }}"
             - name: PGUSER
-              value: "{{ tpa_single_node_pg_admin }}"
+              value: "{{ tpa_single_node_pg_user }}"
             - name: PGPASSWORD
-              value: "{{  tpa_single_node_pg_admin_passwd }}"
+              value: "{{  tpa_single_node_pg_user_passwd }}"
             - name: PGSSLMODE
               value: {{ tpa_single_node_pg_ssl_mode }}
-            - name: DB_NAME
-              value: "{{ tpa_single_node_pg_db }}"
-            - name: DB_USERNAME
-              value: "{{ tpa_single_node_pg_user }}"
-            - name: DB_PASSWORD
-              value: "{{ tpa_single_node_pg_user_passwd }}"
           command:
             - psql
             - --echo-all
