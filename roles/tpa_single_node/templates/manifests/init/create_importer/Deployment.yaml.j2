@@ -35,15 +35,8 @@ spec:
               value: {{ tpa_single_node_pg_ssl_mode }}
           command:
             - psql
-            - --echo-all
             - -v
             - ON_ERROR_STOP=1
-            - -v
-            - db_name=$(DB_NAME)
-            - -v
-            - db_user=$(DB_USERNAME)
-            - -v
-            - db_password=$(DB_PASSWORD)
             - -f
             - /etc/importers/importers.sql
           volumeMounts:
