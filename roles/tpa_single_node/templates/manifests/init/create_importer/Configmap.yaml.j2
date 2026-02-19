@@ -27,7 +27,7 @@ data:
     ;
 
     INSERT INTO IMPORTER (name, revision, state, last_change, configuration)
-    VALUES ('redhat-sboms', gen_random_uuid(), 0, now(), '{"sbom":{"description":"All Red Hat SBOMs","fetchRetries":50,"disabled": true,"keys":["https://access.redhat.com/security/data/97f5eac4.txt#77E79ABE93673533ED09EBE2DCE3823597F5EAC4"],"period":"1d","source":"https://access.redhat.com/security/data/sbom/beta/"}}'::jsonb)
+    VALUES ('redhat-sboms', gen_random_uuid(), 0, now(), '{"sbom":{"description":"All Red Hat SBOMs","fetchRetries":50,"disabled": true,"keys":["https://security.access.redhat.com/data/97f5eac4.txt#77E79ABE93673533ED09EBE2DCE3823597F5EAC4"],"period":"1d","source":"https://security.access.redhat.com/data/sbom/v1/"}}'::jsonb)
     ON CONFLICT (name) DO UPDATE
     SET
     revision=EXCLUDED.revision,
