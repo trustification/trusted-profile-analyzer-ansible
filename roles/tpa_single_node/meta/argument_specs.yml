@@ -129,7 +129,7 @@ argument_specs:
         description: "Custom OIDC scopes for UI frontend client. Read from TPA_UI_SCOPES env var. Sets UI_SCOPES environment variable in server deployment."
         type: "str"
         required: false
-        version_added: "2.0.0"
+        version_added: "2.2.3"
       tpa_single_node_aws_cognito_domain:
         description: "Readed from TPA_OIDC_COGNITO_DOMAIN env var"
         type: "str"

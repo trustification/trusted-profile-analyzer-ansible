@@ -1,4 +1,7 @@
-ansible-lint==26.1.0
+# cap ansible-core version at 2.19.0 until https://github.com/ansible/ansible-lint/pull/4683
+# is released otherwise ansible-lint fails
+ansible-core>=2.16.0,<2.19.0
+ansible-lint==25.1.2
 antsibull-docs==2.14.0
 galaxy-importer==0.4.37
 setuptools>=78.1.1 # not directly required, pinned by Snyk to avoid a vulnerability
