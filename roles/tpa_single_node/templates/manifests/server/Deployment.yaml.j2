@@ -139,6 +139,10 @@ spec:
                 secretKeyRef:
                   name: oidc_secret
                   key: front_end
+{% if tpa_single_node_ui_scopes != '' %}
+            - name: UI_SCOPES
+              value: "{{ tpa_single_node_ui_scopes }}"
+{% endif %}
 {% if tpa_single_node_upload_limit != 'None' %}
             - name: TRUSTD_SBOM_UPLOAD_LIMIT
               value: "{{ tpa_single_node_upload_limit }}"
