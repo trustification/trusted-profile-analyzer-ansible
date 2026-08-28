@@ -20,7 +20,7 @@ Deploy the [RHTPA](https://docs.redhat.com/en/documentation/red_hat_trusted_prof
 ### Optional
 | Option                                      | Description                                                                                   |Type|Default|
 |---------------------------------------------|-----------------------------------------------------------------------------------------------|---|---|
-| tpa_single_node_trustification_image        | Trustification image.                                                                         | str |  `registry.redhat.io/rhtpa/rhtpa-trustification-service-rhel9:2bafd5b3d6389a893427a49b7c36fedc202536b0`  |
+| tpa_single_node_trustification_image        | Trustification image.                                                                         | str |  `registry.redhat.io/rhtpa/rhtpa-trustification-service-rhel9:0d91ca08f4deb07ea12b1c243e98359e11721c37`  |
 | tpa_single_node_base_hostname               | The user name logging in to the registry to pull images.                                      | str |  `trustification`  |
 | tpa_single_node_certificates_dir            | Folder where to place the certificates to deploy on the instance.                             | str |  `certs`  |
 | tpa_single_node_config_dir                  | Configuration directory on the instance.                                                      | str |  `/etc/rhtpa`  |

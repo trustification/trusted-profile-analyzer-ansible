@@ -122,7 +122,7 @@ objects:
       name: rhtpa-konflux-0-2-z
       pullPolicy: IfNotPresent
       registry: #server-image
-      version: 2bafd5b3d6389a893427a49b7c36fedc202536b0
+      version: 0d91ca08f4deb07ea12b1c243e98359e11721c37
     infrastructure:
       port: 9010
     metrics:
@@ -301,7 +301,7 @@ objects:
           volumes: null
           containers:
             - name: job
-              image: registry.redhat.io/rhtpa/rhtpa-trustification-service-rhel9:2bafd5b3d6389a893427a49b7c36fedc202536b0
+              image: registry.redhat.io/rhtpa/rhtpa-trustification-service-rhel9:0d91ca08f4deb07ea12b1c243e98359e11721c37
               imagePullPolicy: IfNotPresent
               env:
                 - name: TRUSTD_DB_HOST

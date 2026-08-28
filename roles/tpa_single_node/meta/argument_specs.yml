@@ -10,7 +10,7 @@ argument_specs:
         description: "Trustification image."
         type: "str"
         version_added: "2.0.0"
-        default: "registry.redhat.io/rhtpa/rhtpa-trustification-service-rhel9:2bafd5b3d6389a893427a49b7c36fedc202536b0"
+        default: "registry.redhat.io/rhtpa/rhtpa-trustification-service-rhel9:0d91ca08f4deb07ea12b1c243e98359e11721c37"
       tpa_single_node_base_hostname:
         description: "The user name logging in to the registry to pull images."
         type: "str"
