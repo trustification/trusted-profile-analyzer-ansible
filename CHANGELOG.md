@@ -1,4 +1,4 @@
-## [3.1.1] - 2026-09-30
+## [3.1.1] - 2026-10-13
 
 ### Release Summary
 Bug fix and improvement release
