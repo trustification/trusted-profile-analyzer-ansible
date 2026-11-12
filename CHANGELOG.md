@@ -1,3 +1,10 @@
+## [3.1.2] - 2026-10-19
+
+### Release Summary
+Update to RHTPA 3.1.2
+Update libraries
+Fourth deprecated version
+
 ## [3.1.1] - 2026-10-13
 
 ### Release Summary
