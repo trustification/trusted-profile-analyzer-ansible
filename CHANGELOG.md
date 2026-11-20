@@ -1,51 +1,7 @@
-## [3.1.2] - 2026-10-19
+## [3.0.1] - 2026-11-25
 
 ### Release Summary
-Update to RHTPA 3.1.2
-Update libraries
-Fourth deprecated version
-
-## [3.1.1] - 2026-10-13
-
-### Release Summary
-Bug fix and improvement release
-Third deprecated version
-
-### Bugfixes
-- TC-4926 UI - Intermittent Read-only warning message
-- TC-5690 Improve the efficiency of the 3.0 Migration scripts for Advisories
-- TC-5722 Operator's excludes.json incorrectly excludes node_modules for JavaScript, breaking reachability analysis
-- TC-5738 Unified importer credential resolution with external secret store support
-- TC-5764 HTTP transport with Pulp Manifest file discovery
-- TC-5996 Replace hardcoded recommendation regex with configurable env var
-- TC-5997 Add recommendation DB entity and migration
-- TC-5998 OSV advisory ingestor hook and reindex endpoint
-- TC-5999 Recommendation report endpoint (POST /v3/recommend/report)
-- TC-6000 Extend SBOM queries with recommendation JOIN and aggregate count
-- TC-6001 Recommendation column in SBOM packages view and packages list page
-- TC-6002 Recommendation column in SBOM vulnerabilities view
-- TC-6003 Aggregate remediation count on SBOMs list page
-- TC-6004 Remediation report page and SBOMs list report button
-- TC-6061 Accept CycloneDX 1.7 SBOMs at ingestion (version gate + fixture + tests)
-- TC-6068 Ingest CycloneDX extended license details into licensing_infos
-- TC-6090 Define shared auth model, update Quay importer, and add data migration
-- TC-6091 Update NVD, KEV, and ClearlyDefined runners to use shared HTTP client builder
-- TC-6229 HTTP transport core: pluggable discovery trait + shared retrieval/integrity layer
-- TC-6230 Pulp Manifest discovery strategy for the HTTP transport
-- TC-6231 Http importer config + run_once_http runner + auth + schema/OpenAPI regen
-- TC-6251 Return 503 FEATURE_UNCONFIGURED when /recommend called without TRUSTD_RECOMMEND_PATTERNS set
-- TC-6303 Expose fixed_versions in PurlStatus and has_fix_versions filter (v2 and v3)
-- TC-6305 Strengthen fetch-failure test: assert Retrieval phase, URL, and error message
-- TC-6319 Fix fixed_versions to serialize as [] when empty (remove skip_serializing_if)
-- TC-6398 Recommendation column in global Packages page, Vulnerabilities page, and Package detail Vulnerabilities tab
-- TC-6411 Fix: fetch_retries silently ignored for authenticated HTTP imports (TC-6231)
-- TC-6412 Fix: Bearer/API-key credentials from files fail with trailing newline
-- TC-6413 Fix: inline qualified paths in build_fetcher violate CONVENTIONS.md import style
-
-## [3.1.0] - 2026-08-13
-
-### Release Summary
-EI integration
+RHTPA 3.0.1 Update base images and libraries 
 Second deprecated version
 
 ### Bugfixes
