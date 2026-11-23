@@ -1,7 +1,7 @@
-## [3.0.1] - 2026-11-25
+## [3.1.2] - 2026-11-23
 
 ### Release Summary
-RHTPA 3.0.1 Update base images and libraries 
+RHTPA 3.1.2 Update base images and libraries 
 Second deprecated version
 
 ### Bugfixes
